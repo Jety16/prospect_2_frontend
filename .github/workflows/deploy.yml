@@ -14,6 +14,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: 📤 Upload Frontend to Google Cloud Storage
+    environment: deploy
 
     steps:
       - name: 📥 Checkout code
