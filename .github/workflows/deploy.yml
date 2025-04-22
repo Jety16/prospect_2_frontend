@@ -8,7 +8,6 @@ on:
 
 env:
   BUCKET_NAME: prospect2-chat-web
-  FRONTEND_DIR: frontend
 
 jobs:
   deploy:
@@ -33,4 +32,4 @@ jobs:
 
       - name: 🚀 Upload files to GCS with no-cache headers
         run: |
-          gsutil -m -h "Cache-Control:no-cache,max-age=0" cp -r $FRONTEND_DIR/* gs://$BUCKET_NAME
+          gsutil -m -h "Cache-Control:no-cache,max-age=0" cp -r ./* gs://$BUCKET_NAME
